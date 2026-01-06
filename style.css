@@ -139,14 +139,15 @@ body {
   border-radius: 20px;
   border: 1px solid var(--border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* ✅ pointer always */
 }
 
 .stack-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  cursor: pointer;
 }
 
+/* ICON INSIDE STACK CARD */
 .stack-card i {
   font-size: 2rem;
   color: var(--accent);
@@ -168,7 +169,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: calc(var(--spacing) * 0.8);
   margin-top: calc(var(--spacing) * 0.5);
-
 }
 
 .project-card {
@@ -177,7 +177,7 @@ body {
   border-radius: 20px;
   border: 1px solid var(--border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  cursor: pointer; /* ✅ pointer always */
 }
 
 .project-card:hover {
