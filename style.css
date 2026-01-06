@@ -116,7 +116,7 @@ body{
 }
 
 #skills h2{
-  margin-bottom:3rem; 
+  margin-bottom:3rem; /* 👈 Adds extra space between title and cards */
 }
 
 .stack-grid{
@@ -136,7 +136,7 @@ body{
 .stack-card i{
   font-size:2rem;
   color:var(--accent);
-  margin-bottom:0rem;
+  margin-bottom:1rem;
 }
 
 /* PROJECTS */
