@@ -209,9 +209,21 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .project-img {
-    aspect-ratio: 16 / 9;
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
   }
+
+  .project-img {
+    display: block;          /* 🔥 inline-img gap fix */
+    width: 100% !important;  /* 🔥 force full width */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 12px;
+  }
+}
+
 
   .contact_links {
     flex-direction: column;
