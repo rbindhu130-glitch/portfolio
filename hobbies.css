@@ -5,6 +5,7 @@
   --border: #e2e8f0;
   --green: #16a34a;
   --green-soft: #c1fad4;
+  --green-dark: #065f46;
 }
 
 * {
@@ -19,11 +20,13 @@ body {
   color: var(--text);
 }
 
+/* ===== CONTAINER ===== */
 .container {
   width: 100%;
   padding: 0 5%;
 }
 
+/* ===== NAVBAR ===== */
 nav {
   background: #fff;
   border-bottom: 1px solid var(--border);
@@ -52,7 +55,7 @@ nav {
   color: var(--green);
 }
 
-
+/* ===== MAIN ===== */
 main {
   padding: 35px 5%;
 }
@@ -70,6 +73,7 @@ h2 {
   margin-bottom: 45px;
 }
 
+/* ===== HOBBY GRID ===== */
 .hobby_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -126,20 +130,7 @@ h2 {
   box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.18);
 }
 
-.hobby_card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  padding: 2px;
-  background: linear-gradient(135deg, #16a34a, #22c55e, #86efac);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.35;
-  pointer-events: none;
-}
-
+/* ===== ACHIEVEMENTS ===== */
 .achievement_section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -155,14 +146,12 @@ h2 {
   font-weight: 700;
   margin-bottom: 25px;
   color: var(--green);
-  text-align: center;
 }
 
+/* ===== ACHIEVEMENT CARD ===== */
 .achievement_card {
   background: #fff;
   border-radius: 18px;
-  padding: 0;
-  text-align: center;
   cursor: pointer;
   transition: 0.4s ease;
   position: relative;
@@ -172,30 +161,70 @@ h2 {
   flex-direction: column;
 }
 
+/* IMAGE – NO CUT */
 .achievement_img_container {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  background: #fff;
 }
 
 .achievement_img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: 0.5s ease;
 }
 
+/* CONTENT */
 .achievement_content {
   padding: 25px;
 }
 
+.achievement_content h3 {
+  transition: 0.3s ease;
+}
+
+.achievement_content p {
+  color: var(--muted);
+  transition: 0.3s ease;
+}
+
+/* 🔥 HOVER COLOR EFFECT */
+.achievement_card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 163, 74, 0.18),
+    rgba(34, 197, 94, 0.18),
+    rgba(134, 239, 172, 0.18)
+  );
+  opacity: 0;
+  transition: 0.4s ease;
+  pointer-events: none;
+}
+
+.achievement_card:hover::after {
+  opacity: 1;
+}
+
 .achievement_card:hover .achievement_img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.achievement_card:hover .achievement_content h3 {
+  color: var(--green);
+}
+
+.achievement_card:hover .achievement_content p {
+  color: var(--green-dark);
 }
 
 .achievement_card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
+  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.25);
 }
 
 .back_home {
@@ -203,7 +232,6 @@ h2 {
   justify-content: center;
   margin-top: 70px;
 }
-
 .back_home a {
   display: inline-flex;
   align-items: center;
@@ -217,12 +245,12 @@ h2 {
   transition: 0.3s ease;
   box-shadow: 0 10px 25px rgba(22, 163, 74, 0.3);
 }
-
 .back_home a:hover {
   background: #22c55e;
   transform: translateY(-4px);
 }
 
+/* ===== FOOTER ===== */
 footer {
   margin-top: 100px;
   border-top: 1px solid var(--border);
@@ -232,6 +260,7 @@ footer {
   background: #fff;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (min-width: 900px) {
   .hobby_grid {
     grid-template-columns: repeat(6, 1fr);
@@ -251,9 +280,5 @@ footer {
   .hobby_grid,
   .achievement_section {
     grid-template-columns: 1fr;
-  }
-  .hobby_card,
-  .achievement_card {
-    grid-column: span 1;
   }
 }
