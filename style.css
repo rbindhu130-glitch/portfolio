@@ -271,8 +271,8 @@ footer {
   color: var(--text);
   transform: rotateY(180deg);
   padding: 20px;
-  text-align: left;
-  align-items: flex-start;
+  text-align: center;
+  align-items: center;
 }
 
 .skill_item {
