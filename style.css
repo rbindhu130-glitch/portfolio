@@ -305,6 +305,23 @@ footer {
   margin-right: 8px;
 }
 
+/* Skill Icon Colors */
+.skill_info span .fa-python { color: #3776AB; }
+.skill_info span .fa-bolt { color: #009688; }
+.skill_info span .fa-database { color: #00758F; }
+.skill_info span .fa-html5 { color: #E34F26; }
+.skill_info span .fa-css3-alt { color: #1572B6; }
+.skill_info span .fa-js { color: #d6b802; } /* Darker yellow for visibility */
+.skill_info span .fa-github { color: #181717; }
+.skill_info span .fa-figma { color: #F24E1E; }
+.skill_info span .fa-code { color: #007ACC; }
+.skill_info span .fa-paper-plane { color: #FF6C37; }
+.skill_info span .fa-masks-theater { color: #2EAD33; }
+.skill_info span .fa-caret-up { color: #000000; }
+.skill_info span .fa-vial { color: #E91E63; }
+.skill_info span .fa-robot { color: #607D8B; }
+.skill_info span .fa-bug { color: #F44336; }
+
 .progress_bar_container {
   width: 100%;
   background: #fff;
