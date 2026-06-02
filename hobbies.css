@@ -290,6 +290,13 @@ footer {
     grid-column: span 3;
   }
 
+  /* Smart centering: if the last achievement card is an odd child (e.g. 5th certificate), center it. If they add a 6th one, this won't apply and they will sit side-by-side! */
+  .achievement_card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+  }
+
 
 }
 
