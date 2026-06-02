@@ -287,7 +287,7 @@ footer {
   }
 
   .achievement_card {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   /* Smart centering: if the last achievement card is an odd child (e.g. 5th certificate), center it. If they add a 6th one, this won't apply and they will sit side-by-side! */
