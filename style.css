@@ -301,6 +301,10 @@ footer {
   width: 100%;
 }
 
+.skill_info span i {
+  margin-right: 8px;
+}
+
 .progress_bar_container {
   width: 100%;
   background: #fff;
