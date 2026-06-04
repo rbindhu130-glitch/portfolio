@@ -290,10 +290,7 @@ footer {
     grid-column: span 2;
   }
 
-  /* Smart centering: if the last achievement card is an odd child (e.g. 7th certificate), center it in the middle column! */
-  .achievement_card:last-child:nth-child(odd) {
-    grid-column: 3 / span 2;
-  }
+  /* Removed centering rule to allow perfect 3x3 grid */
 
 
 }
